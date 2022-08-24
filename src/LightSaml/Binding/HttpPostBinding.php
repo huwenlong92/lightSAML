@@ -64,6 +64,12 @@ class HttpPostBinding extends AbstractBinding
 
         $msg = base64_decode($msg);
 
+        // 修复压缩
+        if($msg[0] != "<"){
+            $msg = gzinflate($msg);
+        }
+
+
         $this->dispatchReceive($msg);
 
         $deserializationContext = $context->getDeserializationContext();
