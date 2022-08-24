@@ -47,7 +47,6 @@
         "monolog/monolog": "^2.0.0",
         "squizlabs/php_codesniffer": "^3.6"
     },
-    "prefer-stable": true,
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "abandoned": "litesaml/lightsaml"
 }
